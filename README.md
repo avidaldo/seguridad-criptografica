@@ -14,7 +14,7 @@ Los servicios de seguridad son aquellos que buscan garantizar los siguientes obj
 
 Cabe señalar que esta lista varía según el autor y es habitual que se añada la autenticación como un objetivo más. Sin embargo, también es habitual considerarla no como un objetivo sino como un método que puede garantizar confidencialidad (solo recibe la información quien se autentica) o no repudio (la persona que accedió es aquella que se autenticó).
 
-## Criptografía de clave simétrica o de clave privada
+## Criptografía simétrica o de clave privada
 
 Es aquella en la que la misma clave se usa para cifrar y descifrar los mensajes. El texto en claro se transforma en un criptograma ininteligible mediante cifrado, y este criptograma puede ser descifrado usando la misma clave.
 
@@ -22,7 +22,7 @@ El gran problema que presenta es el del intercambio de claves, ya que para poder
 
 Algoritmos relevantes son DES (ya roto) y AES (el estándar actual).
 
-## Criptografía de clave asimétrica o de clave pública
+## Criptografía asimétrica o de clave pública
 
 La criptografía asimétrica soluciona el problema de la distribución de la clave privada entre los participantes en la comunicación. En estos sistemas cada participante cuenta con un par de claves propias, clave pública y clave privada: siendo cada una la que permite descifrar mensajes cifrados por la otra.
 
@@ -32,9 +32,9 @@ Si lo que se quiere es conseguir autenticación y no repudio el proceso sería e
 
 Algunos de los algoritmos más relevantes son RSA y DSA.
 
-## Criptografía híbrida
+### Criptografía híbrida
 
-Dado que los sistemas de cifrado asimétricos son computacionalmente más costosos que los simétricos y que éstos tienen el problema del intercambio de claves, existen sistemas híbridos donde se usa un sistema de clave asimétrica para intercambiar de forma segura una clave privada de sesión que se usará para cifrar el resto de la comunicación de forma más eficiente. Ejemplos de este sistema son los protocolos SSH y SSL/TLS (capa de seguridad que utiliza HTTPS).
+Dado que los sistemas de cifrado asimétricos son computacionalmente más costosos que los simétricos y que éstos tienen el problema del intercambio de claves, existen sistemas híbridos donde se usa un sistema de clave asimétrica para intercambiar de forma segura una clave privada de sesión que se usará para cifrar el resto de la comunicación de forma más eficiente. Hoy en día, todas las implementaciones de clave pública utilizan este sistema. Ejemplos de este sistema son los protocolos SSH y SSL/TLS (capa de seguridad que utiliza HTTPS).
 
 ## Función Hash y huella digital
 
